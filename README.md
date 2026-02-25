@@ -19,7 +19,7 @@ khtn@phonghoc
 
 ## 1. THUẬT GIẢI (ALGORITHM)
 
-### 1.1 Khái niệm
+### Khái niệm
 
 - Thuật giải (algorithm) là **dãy các lệnh có thứ tự xác định** để giải một bài toán.
 - Không phải là tập hợp lệnh rời rạc → **thứ tự thực hiện rất quan trọng**.
