@@ -1,5 +1,3 @@
-0ggg# Co-so-tin-hoc_KHDL
-
 khtn@phonghoc
 
 ## Cơ sở lập trình (Th Thúc)
@@ -18,9 +16,9 @@ khtn@phonghoc
 
 - algorithms: An algorithm is a step-by-step set of instructions for solving a problem or doing a task.
 
-# 1. THUẬT GIẢI (ALGORITHM)
+## 1. THUẬT GIẢI (ALGORITHM)
 
-## 1.1 Khái niệm
+### 1.1 Khái niệm
 
 - Thuật giải (algorithm) là **dãy các lệnh có thứ tự xác định** để giải một bài toán.
 - Không phải là tập hợp lệnh rời rạc → **thứ tự thực hiện rất quan trọng**.
@@ -28,7 +26,7 @@ khtn@phonghoc
 
 ---
 
-# 2. BÀI TOÁN TRONG TIN HỌC
+## 2. BÀI TOÁN TRONG TIN HỌC
 
 Một bài toán gồm 4 thành phần:
 
@@ -51,7 +49,7 @@ Một bài toán gồm 4 thành phần:
 
 ---
 
-# 3. CÂU LỆNH (STATEMENT)
+## 3. CÂU LỆNH (STATEMENT)
 
 Lệnh là phát biểu mệnh lệnh làm thay đổi trạng thái chương trình.
 
@@ -59,6 +57,6 @@ Có 3 nhóm chính:
 
 ---
 
-## 3.1 Lệnh nhập / xuất
+### 3.1 Lệnh nhập / xuất
 
 - Nhập dữ liệu:
