@@ -123,7 +123,7 @@ Ví dụ:
 - Tìm phần tử đầu tiên > k → duyệt từ đầu mảng.
 - Có thể cải tiến bằng **tìm kiếm nhị phân** nếu mảng đã tăng dần.
 
-##$ Bước 4: Biểu diễn lời giải
+## Bước 4: Biểu diễn lời giải
 
 - Phân rã từ tổng quát → chi tiết (top-down)
 - Thử với dữ liệu hợp lệ
@@ -146,3 +146,7 @@ Có 3 mức biểu diễn:
 Ngôn ngữ trung gian giữa tiếng Việt và Python.
 
 ### 6.3 Chương trình (Programming Phase)
+
+---
+
+> # Buổi 2: LẬP TRÌNH CẤU TRÚC
