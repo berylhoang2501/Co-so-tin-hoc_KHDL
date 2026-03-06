@@ -150,3 +150,7 @@ Ngôn ngữ trung gian giữa tiếng Việt và Python.
 ---
 
 > # Buổi 2: LẬP TRÌNH CẤU TRÚC
+
+---
+
+> # Buổi 3: LẬP TRÌNH CẤU TRÚC
