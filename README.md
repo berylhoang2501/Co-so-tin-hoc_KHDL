@@ -231,3 +231,35 @@ Subject: [DHKHTN-CSTN]
   - cấu trúc lặp
   - cấu trúc nhảy (break, continue,..)
 
+---
+> # Buổi 2
+
+## 1. Cấu trúc dữ liệu tập hợp 
+
+- list
+  - [], các phần tử cách nhau bằng dấu (,)
+  - có thể không cùng kiểu dữ liệu
+  - có thể truy cập bằng chỉ số index bắt đầu từ 0. -> list[1] lấy phần tử thứ 2.
+  - muốn lấy nhiều phần tử thì dùng cơ chế slice ví dụ list[m:n] -> lấy từ m+1 đến n 
+- tuple
+  - giống list nhưng các phần tử không thể cập nhật
+- dictionary
+  - {}, các phần tử cách nhau bằng dấu (,)
+  - mỗi phần tử key:value
+  - các key có thể do ngừoi sử dụng định nghĩa miễn là không trùng (k khuyến khích dùng)
+- set
+
+- nên chuyển các kiểu dữ liệu khác thành list để dễ xử lý trong các thư viện numpy pandas sklearn,...
+```
+d = {"x": 100, "y": 200}
+t = (1, 2, 3)
+s = {7, 8, 9}
+
+print(list(d))             # ['x', 'y']
+print(list(d.values()))    # [100, 200]
+print(list(t))             # [1, 2, 3]
+print(list(s))             # [7, 8, 9] (thứ tự có thể khác)
+```
+
+
+  
