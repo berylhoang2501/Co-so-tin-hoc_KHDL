@@ -261,5 +261,34 @@ print(list(t))             # [1, 2, 3]
 print(list(s))             # [7, 8, 9] (thứ tự có thể khác)
 ```
 
+---
+> # Buổi 3
 
-  
+## 2. Mảng và ma trận 
+
+- python -> list
+- numpy -> array (mảng 1 chiều). mảng 2 chiều là matrix
+
+### Vecto
+- biểu diễn 1 đối tượng trong thực tế
+- chuyển từ dữ liệu phân loại sang dữ liệu số dùng label encoding, one-hot encoding 
+  - Label Encoding: biến mỗi nhóm thành một con số
+  - One-Hot Encoding: biến mỗi nhóm thành một cột riêng gồm 0 và 1
+  - Biến có thứ tự → Label Encoding hợp lý hơn
+  - Biến không có thứ tự → One-Hot Encoding thường tốt hơn
+
+- chuẩn của vector là khoảng cách từ góc toạ độ tới điểm đó
+  - chuẩn L2
+  - chuẩn L1 (tổng trị tuyệt đối các toạ độ)
+  - chuẩn Lmax
+ 
+### Ma trận
+
+- Ma trận thể hiện mối liên hệ giữa các đại lượng (tập hợp). mỗi đối tượng có n features
+  - Thay đổi thứ tự các dòng, các cột thì bản chất bài toán không thay đổi
+- Ma trận đặc biệt
+  - Ma trận vuông, ma trận đường chéo, ma trận tam giác (trên dưới), ma trận đơn vị, ma trận chuyển vị 
+  - Ma trận đối xứng
+  - ma trận vuông khả nghịch hay k -> tính định thức, nếu định thức khác 0 thì khả nghịch
+  - ma trận vuông. áp dụng phép biến đổi sơ cấp trên dòng, đến khi có dòng mà tất cả các giá trị đều = 0 ..-> hạng của ma trận
+  - so sánh rank(A) và rank rank (A|B). nếu rank A < n => xảy ra 2 trg hợp vô nghiệm và vô định. rankA = rankAB nghĩa là số dòng khác 0 của A và AB giống nhau => vô định. nếu rank ab > rank 0 thì có số khác không => vô nghiệm . theo định lý kronecker - capelli)
