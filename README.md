@@ -292,3 +292,16 @@ print(list(s))             # [7, 8, 9] (thứ tự có thể khác)
   - ma trận vuông khả nghịch hay k -> tính định thức, nếu định thức khác 0 thì khả nghịch
   - ma trận vuông. áp dụng phép biến đổi sơ cấp trên dòng, đến khi có dòng mà tất cả các giá trị đều = 0 ..-> hạng của ma trận
   - so sánh rank(A) và rank rank (A|B). nếu rank A < n => xảy ra 2 trg hợp vô nghiệm và vô định. rankA = rankAB nghĩa là số dòng khác 0 của A và AB giống nhau => vô định. nếu rank ab > rank 0 thì có số khác không => vô nghiệm . theo định lý kronecker - capelli)
+
+
+---
+> # Buổi 4
+
+## 1. Xử lý tập tin văn bản 
+## 2. Regular Expression 
+
+## Yêu cầu đồ án 
+- bài toán người giao hàng. cài đặt thuật toán A*
+
+- yc1: nhập số liệu/ nhập file excel. nếu nhập số liệu thì nhập ma trận (nhập điểm). file excel thì thầy đưa
+  - in ra lộ trình đi (đi từ ô nào đến ô nào) và tổng chi phí. ví dụ đi từ (2,1) -> (3,1) ....
