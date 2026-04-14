@@ -305,3 +305,15 @@ print(list(s))             # [7, 8, 9] (thứ tự có thể khác)
 
 - yc1: nhập số liệu/ nhập file excel. nếu nhập số liệu thì nhập ma trận (nhập điểm). file excel thì thầy đưa
   - in ra lộ trình đi (đi từ ô nào đến ô nào) và tổng chi phí. ví dụ đi từ (2,1) -> (3,1) ....
+
+
+---
+> # Buổi 5
+
+## 1. Matrix factorization
+
+## 2. Eigendecomposition 
+
+## 3, Singular Value Decomposition (SVD)
+
+## 4. Principal Component Analysis (PCA)
