@@ -316,4 +316,112 @@ print(list(s))             # [7, 8, 9] (thứ tự có thể khác)
 
 ## 3, Singular Value Decomposition (SVD)
 
+---
+> # Buổi 6
+
 ## 4. Principal Component Analysis (PCA)
+
+---
+> # Buổi 7
+
+## Khai phá dữ liệu chuỗi thời gian 
+
+- chuỗi thời gian: thu thập với tần suất cố định
+- quan trọng nhất: khám phá ra những dạng thức chung và những bất thường 
+- dữ liệu chuỗi thời gian y predict dựa trên y trong quá khứ. còn supervised learning thì
+  - yếu tố xu thế (quy luật mang tính dài hạn, biến động tăng giảm đáng kế,..)
+  - mùa vụ (lễ tết, cuối tuần,..). thời điểm bắt đầu ổn định, có thể đoán trước. có thể ước lượng được thời gian kéo dài bao lâu. biên độ dao động ít hơn chu kì
+  - chu kì (khủng hoảng kinh tế, khí hậu (el nino),..). 
+  - thặng dư (residual), ngẫu nhiên (random), bất thường (irregular). những gì không thể giải thích được theo quy luật (phần sót lại ngoài những phần đã được giai thích theo quy luật)
+- đơn giản hoá bài toán phân tích bằng (trend, cyclic) -> trend
+
+## Phân rã tổng và phân rã tích 
+
+- từ dãy ban đầu tách thành 3 dãy thành phần (trend, seasonal, residual) -> nhân thành tích, cộng thành tổng
+### 1. Phân rã tổng 
+- tăng từ từ
+  
+### 2. Phân rã tích
+- tặng mạnh, giảm mạnh
+
+## Phép biến đổi trên chuỗi dữ liệu thời gian 
+
+## Biến đổi giá trị yT chỉ dựa trên yT
+### 1. Phép biến đổi log transformation
+- Sau khi biến đổi thì cũng kéo phân phối gần phân phối gần về chuẩn
+
+### 2. Phép biến đổi Box-Cox
+- Cho phép xử lý số âm (âm vừa phải lớn hơn 1 lâmđa nào đó). Phương sai ổn định không quá xa trung bình. Phương sai ổn định hơn là pp log transform
+
+### 4. Phép biến đổi Yeo-Johnson)
+- Dữ liệu âm và dữ liệu dương đều dùng đc
+
+## Biến đổi giá trị yT còn dựa trên các giá trị khác
+
+## Phương pháp làm trơn 
+
+- khi 1 điểm có biên độ quá mạnh thì giá trị sẽ đc san sẻ cho các điểm lân cận
+
+### 1. Phương pháp Simple moving average smoothing (SMA)
+
+- sliding window. ví dụ điền giá trị 1 ngày bằng trung bình cộng của 6 ngày trước. dãy số mới sẽ mất đi (w-1) giá trị ban đầu)
+
+### 2. Phương pháp Centered moving average smooothing 
+
+  - 2 phương pháp trên có điểm trừ là chưa tính tới trọng số
+
+### 3. weighted 
+
+## Phương pháp san bằng mũ (Exponetial Smoothing)
+
+### 1. Phương pháp Simple exponential smooothing 
+
+- mục tiêu loại bỏ các yếu tố ngẫu nhiên -> nhìn thấy xu thế và mùa vụ rõ hơn
+
+- khi đệ quy thì sẽ ra hàm mũ
+
+### 2. Phương pháp double exponetial 
+
+- áp dụng cho dữ liệu không có tính mùa vụ nhưng có trend
+
+- từ 1 dãy ban đầu vẽ đc 2 đường, đường làm trơn (Lt - Level) và đường xu thế (Tt - Trend)
+
+### 4. PP Triple 
+
+## PP hiệu chỉnh mùa vụ (seasonal adjustmenent)
+
+## PP Calender Adjustment
+
+- thay đổi đơn vị tính
+
+## PP Population Adjustment 
+
+## PP Inflation Adjustment 
+
+# Dự báo với dữ liệu chuõi thời gian 
+
+- Những điều cần quan tâm khi dự báo: những dữ liệu cần thiết, khả năng suy diễn từ quá khứ cho tương lai
+
+## Phương pháp 
+### 1. Ngoại suy (extrapolation)
+- nằm trong khoang (xmin, xmax) -> nội suy. -> predicting . dự đoán 
+  
+- nằm ngoài khoảng -> ngoại suy. -> forcasting. dự báo
+
+  - native method: giá trị của tương lai luôn bằng giá trị của ngày cuối cùng
+  - mean method, average method
+  - drift method
+  - seasonal naitive method 
+  
+### 2. Phân rã (decomposition)
+
+### 3. Mô hình ARIMA
+
+- AR - auto regression. mô hình tự hồi quy bậc AR
+- I (Integrated)
+
+- siêu tham số (các bậc của đa thức) và tham số (hệ số a,b...)
+
+- siêu tham số là giá trị đại diện cho 1 lớp mô hình
+
+- trong mô hình arima thì ấn định p (siêu tham số) trước rồi mới suy ra phi 
