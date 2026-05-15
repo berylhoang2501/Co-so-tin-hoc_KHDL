@@ -417,6 +417,8 @@ print(list(s))             # [7, 8, 9] (thứ tự có thể khác)
 
 ### 3. Mô hình ARIMA
 
+- dựa trên 3 yto: những giá trị xảy ra khách quan trong quá khứ, auto regressor và sai phân (thích ứng với biến động)
+- 
 - AR - auto regression. mô hình tự hồi quy bậc AR
 - I (Integrated)
 
@@ -424,4 +426,69 @@ print(list(s))             # [7, 8, 9] (thứ tự có thể khác)
 
 - siêu tham số là giá trị đại diện cho 1 lớp mô hình
 
-- trong mô hình arima thì ấn định p (siêu tham số) trước rồi mới suy ra phi 
+- trong mô hình arima thì ấn định p (siêu tham số) trước rồi mới suy ra phi
+
+#### 3.1. Mô hình tự hồi quy bậc p 
+- dự đoán gtri tại thời điểm t vủa biến Y bằng tổ hợp tuyến tính của nhưng dữ liệu trọng quá khứ của chính biến Y
+
+- p (sliding window) là siêu tham số
+  
+- c với phi xấc định sau p
+
+#### 3.2. Mô hình trung bình trượt bậc q
+
+- dự đoán gtri tại thời điểm t vủa biến Y dựa trên những sai số của dự đoán trong quá khứ
+
+- mô hình trượt bậc q MA(q)
+
+### Mô hình ARIMA (p,d,q)
+
+- xác định 3 siêu tham số p,d,q trước
+
+- dùng phương pháp maximum likelihood exponential
+
+#### Phuương pháp box-jenkins 
+
+- b1: nhận diện (xđ gtri các siêu thso)
+  - xác đinh tính ổn định hay tính dừng (stationary) bậc đạo hàm d bên tay trái
+    - lag-k operator
+    - lagged value
+    - hệ số tự tương quan
+    - hàm tự tương quan
+    - Thế nào đc gọi là ổn đinh ? (1) kỳ vongj k đổi, (2) phương sai k đổi, (3) hệ số r_k chỉ phụ thuộc vào độ trễ k , không phụ thuoc t
+  - trend, seasonal khôg có tính ổn định
+  - residual (noise) có tính chất ổn định
+  - Nhận dạng trực quan
+    - constant mean
+    - constant variance
+    - constant autocorrelation: khoảng cách đều đặn giữa các đỉnh
+    - biểu đồ correlogram bdien ACF của CTG có trend/seasonal/residual
+  - Kiểm định tính ổn định
+    - kiểm định ADF test
+    - Kiểm định KPSS test
+  - => Nếu nghi ngờ dãy k ổn định thì áp dụng phép sai phân để biến dãy không ổn định thành ổn định. số lần thưcj hiện phép sai phân là giá trị của tham số d 
+  - xđ gtri p và q
+- b2: xác định các tham số
+- b3: đánh giá mô hình 
+
+#### Kỹ thuật sai phân (differencing)
+- sai phân bậc 1, sai phân bậc 2,...
+- phải biến đổi thành dãy dừng thì dự đoán mới có tính tin cậy
+- CTG nhiều trắng: E(Yt) = 0, Var(Yt) không đổi, rk =0 với mọi k >0 -> CTG ổn định
+- CTG bước ngẫu nhiên (random walk) lấy sai phân sẽ thành dãy dừng
+
+#### Vai trò của ACF đối với mô hình thành phần AR
+
+### Xác định q và p sau khi biết d
+
+- Hàm tự tương quan riêng phần
+
+- Tìm p dùng PACF, chỗ bị tụt mạnh thì cắt chỗ đó r lấy p
+<img width="722" height="356" alt="Ảnh màn hình 2026-05-15 lúc 19 39 31" src="https://github.com/user-attachments/assets/78758549-30db-470d-a36f-f6524deba8ca" />
+
+- Tìm q dùng ACF
+
+<img width="749" height="349" alt="Ảnh màn hình 2026-05-15 lúc 19 40 05" src="https://github.com/user-attachments/assets/8360e523-2df8-4179-b053-64e09075cb91" />
+
+
+Nộp 2 hình thức : giấy với file ipynb
